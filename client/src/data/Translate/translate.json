@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+          "key": "EN",
+          "language": "EN"
+        },
+        {
+          "key": "CN",
+          "language": "CN"
+        },
+        {
+          "key": "JP",
+          "language": "JP"
+        },
+        {
+          "key": "KR",
+          "language": "KR"
+        },
+        {
+          "key": "VT",
+          "language": "VT"
+        }
+      ]
+}
