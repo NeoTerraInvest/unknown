@@ -31,7 +31,7 @@ const Main = ({ translate }: { translate: translateKey }) => {
       </MarginLayout>
       <MarginLayout auto={!isAbout}>
         <h1 className={styles.aboutMargin} id='target-about'>
-          About SeAPT
+          About SillyPong
         </h1>
         <About translate={translate} />
       </MarginLayout>
@@ -59,7 +59,7 @@ const Main = ({ translate }: { translate: translateKey }) => {
         <div className={styles.universeMargin}>
           {/* <h1 id={styles.universeMargin}>
             <span>Own the universe</span>
-            <span>with SeAPT</span>
+            <span>with SillyPong</span>
           </h1> */}
           <Universe />
         </div>

@@ -45,6 +45,17 @@
             }
         },
         {
+            "id":"4",
+            "title":"White Paper",
+            "description":{
+                "EN": "",
+                "CN": "",
+                "JP": "",
+                "KR": "",
+                "VT": ""
+            }
+        },
+        {
             "id":"5",
             "title":"Lucky to Earn",
             "description":{
