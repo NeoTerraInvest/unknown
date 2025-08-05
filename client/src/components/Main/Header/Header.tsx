@@ -8,8 +8,8 @@ import { HashLink } from 'react-router-hash-link';
 import { useNavigate } from 'react-router-dom';
 
 const CDNURL = import.meta.env.VITE_API_CDN_URL;
-const headerLogoWeb = `${CDNURL}/images/header-logo-120-48.svg`;
-const headerLogoMobile = `${CDNURL}/images/header-logo-86-48.svg`;
+const headerLogoWeb = `${CDNURL}/images/sillypong/web-logo.svg`;
+const headerLogoMobile = `${CDNURL}/images/sillypong/web-logo.svg`;
 const hambuger = `${CDNURL}/images/ui/hambuger.svg`;
 
 const Header = () => {
@@ -63,7 +63,7 @@ const Header = () => {
                   <img
                     src={headerLogoMobile}
                     alt='logo-m'
-                    width={86}
+                    width={48}
                     height={48}
                   />
                 </HashLink>

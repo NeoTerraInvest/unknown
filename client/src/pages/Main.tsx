@@ -7,7 +7,7 @@ import {
   Train,
   SNS,
   Tokenomics,
-  WhitePaper,
+  // WhitePaper,
   Universe,
 } from '@components';
 import { useTrackingView } from '@model';
@@ -47,20 +47,20 @@ const Main = ({ translate }: { translate: translateKey }) => {
         </h1>
         <SNS />
       </MarginLayout>
-      <MarginLayout>
+      {/* <MarginLayout>
         <div className={styles.whitepaperMargin} id='target-whitepaper'>
           <WhitePaper translate={translate} />
         </div>
-      </MarginLayout>
+      </MarginLayout> */}
       <div className={styles.trainMargin}>
         <Train />
       </div>
       <MarginLayout>
         <div className={styles.universeMargin}>
-          <h1 id={styles.universeMargin}>
+          {/* <h1 id={styles.universeMargin}>
             <span>Own the universe</span>
             <span>with SeAPT</span>
-          </h1>
+          </h1> */}
           <Universe />
         </div>
       </MarginLayout>

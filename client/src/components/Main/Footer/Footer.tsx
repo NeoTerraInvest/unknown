@@ -3,7 +3,7 @@ import { useTrackingView } from '@model';
 import { HashLink } from 'react-router-hash-link';
 
 const CDNURL = import.meta.env.VITE_API_CDN_URL;
-const footerLogo = `${CDNURL}/images/footer-logo.svg`;
+const footerLogo = `${CDNURL}/images/sillypong/web-logo.svg`;
 
 const Footer = () => {
   const isMobile = useTrackingView();
@@ -26,14 +26,14 @@ const Footer = () => {
             <img
               src={footerLogo}
               width={120}
-              height={48}
+              height={120}
               alt='logo'
               loading='lazy'
             />
           </HashLink>
           <div className={styles.information}>
             <div id={styles.info}>contact : neoterrafund@gmail.com</div>
-            <div id={styles.info}>Space APT © 2025. All rights reserved.</div>
+            <div id={styles.info}>SillyPong © 2025. All rights reserved.</div>
           </div>
         </div>
       )}
@@ -105,7 +105,7 @@ const Footer = () => {
         <div className={styles.contents}>
           <div className={styles.information}>
             <div id={styles.info}>contact : neoterrafund@gmail.com</div>
-            <div id={styles.info}>Space APT © 2025. All rights reserved.</div>
+            <div id={styles.info}>SillyPong © 2025. All rights reserved.</div>
           </div>
         </div>
       ) : (

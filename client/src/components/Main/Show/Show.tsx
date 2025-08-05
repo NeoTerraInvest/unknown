@@ -5,12 +5,12 @@ import { translateKey } from '@types';
 import { useNavigate } from 'react-router-dom';
 
 const CDNURL = import.meta.env.VITE_API_CDN_URL;
-const mainCharcter1919 = `${CDNURL}/images/global/1919/img_main_charcter.svg`;
-const mainCharcter767 = `${CDNURL}/images/global/img_main_charcter_767.svg`;
+const mainCharcter = `${CDNURL}/images/sillypong/sillypong-char.png`;
+// const mainCharcter767 = `${CDNURL}/images/global/img_main_charcter_767.svg`;
 
 const Show = ({ translate }: { translate: translateKey }) => {
   const isMobile767 = useTrackingView({ size: 900 });
-  const isMobile880 = useTrackingView({ size: 880 });
+  // const isMobile880 = useTrackingView({ size: 880 });
   const isMobile340 = useTrackingView({ size: 340 });
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ const Show = ({ translate }: { translate: translateKey }) => {
         <div id={styles.background}>
           {isMobile767 || isMobile340 ? (
             <div id={styles.charcter}>
-              <img src={mainCharcter767} alt='main' loading='lazy' />
+              <img src={mainCharcter} alt='main' loading='lazy' />
             </div>
           ) : null}
         </div>
@@ -54,7 +54,7 @@ const Show = ({ translate }: { translate: translateKey }) => {
           {!isMobile767 ? (
             <img
               id={styles.outer}
-              src={!isMobile880 ? mainCharcter1919 : mainCharcter767}
+              src={mainCharcter}
               loading='lazy'
               alt='main'
             />
