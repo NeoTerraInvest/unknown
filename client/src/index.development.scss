@@ -4,7 +4,7 @@
 body {
     background-color: var(--dark-background);
     @include dynamic_display(1440px, 1919px){
-      background-color: #5F4AFF;
+      background-color: linear-gradient(135deg, #87CEEB, #FFB6C1, #DDA0DD);
     }
   
     @include dynamic_display(1025px, 1439px){

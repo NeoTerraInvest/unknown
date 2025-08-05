@@ -30,4 +30,5 @@ export { default as OrderBook } from './ui/TokenList/OrderBook';
 export { default as Chart } from './ui/TokenList/Chart';
 export { default as TokenListCategory } from './ui/TokenList/TokenListCategory';
 export { default as MemoizedTokenListFrame } from './ui/TokenList/MemoizedTokenListFrame';
-export { default as ItemCard } from './ui/Shopping/itemCard';
+export { default as ItemCard } from './ui/Shopping/ItemCard';
+export { default as FooterTest } from './Main/Footer/Footer.test';

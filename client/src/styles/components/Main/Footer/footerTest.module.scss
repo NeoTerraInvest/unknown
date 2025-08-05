@@ -1,0 +1,196 @@
+@use '../../../mediaQuery' as *;
+// 기존 footer.module.scss에 추가할 새로운 스타일
+
+.gradientFooter {
+    padding: 96px 0; // py-24 equivalent (24 * 4px = 96px)
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #FFB6C1 0%, #DDA0DD 50%, #87CEEB 100%);
+  
+    // Background decorations container
+    .backgroundDecorations {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      pointer-events: none;
+  
+      .star1 {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 48px;
+        height: 48px;
+        color: #F5F5DC;
+        fill: #F5F5DC;
+        animation: bounceSoft 2s ease-in-out infinite;
+      }
+  
+      .heart1 {
+        position: absolute;
+        top: 80px;
+        right: 80px;
+        width: 32px;
+        height: 32px;
+        color: white;
+        fill: white;
+        animation: pulse 2s ease-in-out infinite;
+      }
+  
+      .sparkles1 {
+        position: absolute;
+        bottom: 80px;
+        left: 80px;
+        width: 40px;
+        height: 40px;
+        color: #F5F5DC;
+        animation: bounceSoft 2s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+  
+      .star2 {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        width: 24px;
+        height: 24px;
+        color: white;
+        fill: white;
+        animation: bounceSoft 2s ease-in-out infinite;
+        animation-delay: 0.5s;
+      }
+    }
+  
+    // Main container
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+  
+    // Glass card
+    .glassCard {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 48px;
+      border: 4px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      max-width: 1024px;
+      margin: 0 auto;
+      position: relative;
+  
+      @include dynamic_display(340px, 767px) {
+        padding: 24px;
+        border-radius: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
+  
+      // Top heart decoration
+      .topHeart {
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+  
+        .heartContainer {
+          background: #F5F5DC;
+          border-radius: 50%;
+          padding: 16px;
+          border: 4px solid white;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+          animation: bounceSoft 2s ease-in-out infinite;
+  
+          .heartIcon {
+            width: 32px;
+            height: 32px;
+            color: #FFB6C1;
+            fill: #FFB6C1;
+          }
+        }
+      }
+  
+      // Join adventure badge
+      .joinBadge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(4px);
+        color: #334155;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        border: 2px solid white;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  
+        .sparkleIcon {
+          width: 20px;
+          height: 20px;
+          color: #DDA0DD;
+          margin-right: 8px;
+          animation: pulse 2s ease-in-out infinite;
+        }
+  
+        .starIcon {
+          width: 20px;
+          height: 20px;
+          color: #F5F5DC;
+          fill: #F5F5DC;
+          margin-left: 8px;
+          animation: spin 3s linear infinite;
+        }
+      }
+  
+      // Main title
+      .mainTitle {
+        font-size: 36px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 32px;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  
+        @include dynamic_display(768px, 1024px) {
+          font-size: 48px;
+        }
+  
+        @include dynamic_display(1025px, max) {
+          font-size: 64px;
+        }
+      }
+    }
+  }
+  
+  // Animations
+  @keyframes bounceSoft {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

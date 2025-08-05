@@ -186,7 +186,7 @@ body {
   font-family: var(--font-style);
   line-height: 125%;
   letter-spacing: var(--letter-spacing);
-  background-color: var(--dark-background);
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1, #DDA0DD);
   width: 100%;
   max-width: 1440px;
   min-width: 340px;

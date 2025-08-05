@@ -7,11 +7,23 @@
 }
 
 #debug{
-    background-color: var(--dark-object-grey-1);
+    // background-color: var(--dark-object-grey-1);
+    // background: linear-gradient(
+    //     135deg, 
+    //     rgba(60, 120, 255, 0.3) 20%,
+    //     rgba(255, 80, 180, 0.3) 50%,
+    //     rgba(60, 120, 255, 0.3) 100%,
+    // );
+    background: linear-gradient(135deg, #87CEEB 20%, #DDA0DD 50%, #87CEEB 100%);
     border-radius: var(--radius-size);
     width: 100%;
     max-width: 628px;
     height: auto;
+
+    box-shadow: 
+        0 12px 40px rgba(31, 38, 135, 0.4),
+        0 4px 16px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
     @include dynamic_display(768px, 1024px){
         // width: 472px;
@@ -86,7 +98,7 @@
         }
         #property{
             @include body-lg-max;
-            color: var(--dark-text-primary);
+            // color: var(--dark-text-primary);
             padding: 4px 0 20px 0;
 
             @include dynamic_display(1440px, 1919px){

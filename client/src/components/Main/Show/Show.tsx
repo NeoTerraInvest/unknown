@@ -18,9 +18,9 @@ const Show = ({ translate }: { translate: translateKey }) => {
     <div id={styles.debug}>
       <div
         id={styles.container}
-        style={{
-          backgroundImage: `url('${CDNURL}/images/global/img_main_background.svg')`,
-        }}
+        // style={{
+        //   backgroundImage: `url('${CDNURL}/images/global/img_main_background.svg')`,
+        // }}
       >
         <div id={styles.background}>
           {isMobile767 || isMobile340 ? (

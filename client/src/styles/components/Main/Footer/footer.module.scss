@@ -29,18 +29,45 @@
 }
 
 #debug{
-    background-color: var(--dark-background);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.1); // 반투명 흰색 오버레이
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%); // Safari 지원
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 24px 24px 0 0;
+        pointer-events: none; // 클릭 이벤트 통과
+    }
+
+    background: linear-gradient(135deg, #FFB6C1 0%, #DDA0DD 50%, #87CEEB 100%);
+    backdrop-filter: blur(16px);
+    border-radius: 24px 24px 0 0;
     justify-content: space-between;
     // gap: 155px;
     font: var(--standard-font-size);
     font-weight: var(--font-weight-medium);
     padding: 80px 60px 160px 60px;
     bottom: 0;
+    position: relative;
+    z-index: 1;
+
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
     @include dynamic_display(768px, 1024px){
         padding: 80px 29px 160px 29px;
     }
     @include dynamic_display(340px, 767px){
         padding: 40px 0px 32px 40px;
+    }
+    .contents, #container {
+        position: relative;
+        z-index: 10; // 높은 z-index 적용
     }
 
     .contents{
@@ -58,7 +85,7 @@
                 margin-top: 56px;
             }
             #info{
-                color: var(--dark-text-sub);
+                color: white;
                 font: var(--small-font-size);
                 font-weight: var(--font-weight-regular);
             }
@@ -70,17 +97,16 @@
             gap: 32px;
         }
         .contents{
-            // background-color: darkcyan;
             gap: 20px;
             @include dynamic_display(340px, 767px){
                 gap: 16px;
             }
             .group{
                 gap: 24px;
-                div{color: var(--dark-text-sub); cursor: pointer;}
+                div{color: white; cursor: pointer;}
             }
             .title{
-                color: var(--dark-text-default);
+                color: white;
                 font-weight: var(--font-weight-bold);
             }
         }

@@ -4,12 +4,18 @@
 #debug, .container,.contents{
     display: flex;
     flex-direction: column;
-    background-color: var(--dark-object-grey-1);
+    // background-color: var(--dark-object-grey-1);
     justify-content: center;
     align-items: center;
 }
-
 .container{
+    // background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     padding: 24px;
     @include dynamic_display(481px, 767px){
         padding: 28px 16px;
@@ -59,6 +65,13 @@
         #title{
             margin-bottom: 20px; 
             @include heading-sub-1439;
+            background: linear-gradient(135deg, #87CEEB 10%, #FFB6C1 30%, #DDA0DD 50%, #87CEEB 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 8px 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
             @include dynamic_display(768px, 1024px){
                 @include heading-sub-1024;
@@ -73,9 +86,19 @@
             }
         }
         #description{ 
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             height: 48px; 
             @include body-sm-1439;
+            background: linear-gradient(135deg, #87CEEB 10%, #FFB6C1 40%, #DDA0DD 70%, #87CEEB 100%);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 6px 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             @include dynamic_display(768px, 1024px){
                 @include body-sm-1024;
             }

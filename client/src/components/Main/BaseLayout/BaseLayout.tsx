@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Header, Footer } from '@components';
+
 // import { baseLayout as gideLine } from '@styles';
 
 const BaseLayout = ({ children }: { children: ReactNode }) => {
@@ -8,6 +9,7 @@ const BaseLayout = ({ children }: { children: ReactNode }) => {
       <Header />
       {children}
       <Footer />
+      {/* <FooterTest /> */}
     </div>
   );
 };

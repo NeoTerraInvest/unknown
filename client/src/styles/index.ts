@@ -36,3 +36,5 @@ export { default as tokenListCategory } from './components/ui/TokenList/tokenLis
 //pages
 export { default as main } from './pages/main.module.scss';
 export { default as tokenList } from './pages/TokenList/tokenList.module.scss';
+
+export { default as footerTest } from './components/Main/Footer/footerTest.module.scss';
